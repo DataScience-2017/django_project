@@ -1,0 +1,18 @@
+{% extends '와꾸.html' %}
+
+
+{% block content %}
+
+
+
+<a href="{% url '홈페이지:목록' %}"> 목록으로 돌아가기</a>
+<h1>이것이 고객 {{사람키.first_name}}님의 나이 정보입니다 </h1>
+
+<p>이 분의 나이는 {{사람키.age}} 입니다.
+
+<p>영업실적을 올린 직원은 {{ 사람키.person }} 입니다.
+
+<a href="{% url '홈페이지:업뎃' 사람키.pk %}"> 업데이트</a>
+<a href="{% url '홈페이지:지우기' 사람키.pk %}"> 지우기</a>
+
+{% endblock content %}

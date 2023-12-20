@@ -1,0 +1,15 @@
+{% extends '와꾸.html' %}
+
+
+{% block content %}
+<a href="{% url '홈페이지:목록' %}"> 목록으로 돌아가기</a>
+
+<p> {{ 사람키.last_name }}  {{ 사람키.first_name }} 님의 개인정보를 수정해주세요.
+<p>
+<form method="post">
+    {% csrf_token %}
+    {{ 폼키.as_p }}
+    <button type="submit"> 신청하기 </button>
+</form>
+
+{% endblock content %}

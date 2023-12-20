@@ -1,0 +1,12 @@
+{% extends '와꾸.html' %}
+
+
+{% block content %}
+<p> 세일을 입력해주세요
+<p>
+<form method="post">
+    {% csrf_token %}
+    {{ 폼키.as_p }}
+    <button type="submit"> 신청하기 </button>
+</form>
+{% endblock content %}
